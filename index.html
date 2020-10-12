@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+
 </head>
+
+<body>
     <H1>Le pendu</H1>
     <p>Trouvez le mot - tapez une lettre</p>
     <div class="game-container">
@@ -19,7 +22,7 @@
             <line x1="20" y1="230" x2="100" y2="230" />
 
             <!-- TETE -->
-            <circle cx="140" cy="70" r="20"  class="figure-part" />
+            <circle cx="140" cy="70" r="20" class="figure-part" />
 
             <!-- CORPS -->
             <line x1="140" y1="90" x2="140" y2="150" class="figure-part" />
@@ -33,33 +36,26 @@
             <line x1="140" y1="150" x2="160" y2="180" class="figure-part" />
         </svg>
         <div class="wrong-letters-container">
-            <div id="wrong-letters">
-                <p>Faux</p>
-                <span>a,f,f,e,e</span>
-            </div>
+            <div id="wrong-letters"></div>
         </div>
-        <div class="word" id="word">
-            <div class="letters">s</div>
-            <div class="letters">a</div>
-            <div class="letters">l</div>
-            <div class="letters">u</div>
-            <div class="letters">t</div>
-        </div>
+        <div class="word" id="word"></div>
     </div>
 
     <!-- POP UP -->
     <div class="popup-container" id="popup-container">
         <div class="popup">
-            <h2 id="final-message">Gagné</h2>
+            <h2 id="final-message"></h2>
             <button id="play-button">Rejouer</button>
         </div>
     </div>
+    <!-- <div class="dictionary-container" id="dictionary-container">
+        <div class="description"></div>
+    </div> -->
 
     <!-- NOTIFICATION -->
     <div class="notification-container" id="notification-container">
         <p>Vous avez déjà rentré cette lettre</p>
     </div>
-<body>
     <script src="hangman.js"></script>
 </body>
 
