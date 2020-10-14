@@ -1,3 +1,4 @@
+// VARIABLES
 const wordEl = document.getElementById('word');
 const wrongLettersEl = document.getElementById('wrong-letters');
 const playAgainBtn = document.getElementById('play-button');
@@ -7,7 +8,6 @@ const finalMessage = document.getElementById('final-message');
 
 const figureParts = document.querySelectorAll('.figure-part');
 
-//CREER UN TABLEAU PRE-REMPLIS AVEC DIFFERENTS MOTS 
 const words = ['bleu', 'super', 'autre', 'bizarre', 'difficile', 'drole', 'etrange', 'facile',
     'grace', 'impossible', 'jeune', 'juste', 'libre', 'malade', 'meme', 'pauvre', 'possible',
     'propre', 'rouge', 'sale', 'simple', 'tranquille', 'triste', 'vide', 'bonne', 'toute', 'doux',
@@ -18,11 +18,12 @@ const words = ['bleu', 'super', 'autre', 'bizarre', 'difficile', 'drole', 'etran
     'seul', 'tout', 'vert', 'vivant'
 ];
 
-// SELECTIONNE UN MOT AU HASARD DANS LE TABLEAU WORDS
-let selectedWord = words[Math.floor(Math.random() * words.length)];
-console.log(selectedWord);
 const correctLetters = [];
 const wrongLetters = [];
+
+// CHOOSE A RANDOM WORD IN WORDS ARRAY
+let selectedWord = words[Math.floor(Math.random() * words.length)];
+
 
 function displayWord() {
     wordEl.innerHTML = `
@@ -36,14 +37,14 @@ function displayWord() {
     const innerWorld = wordEl.innerText.replace(/\n/g, '');
 
     if (innerWorld === selectedWord) {
-        finalMessage.innerText = 'Félicitation';
+        finalMessage.innerText = 'Félicitation tu as trouvé le mot caché !!';
         popup.style.display = 'flex';
     }
 }
 
 function updateWrongLettersEl() {
     wrongLettersEl.innerHTML = `
-        ${wrongLetters.length > 0 ? '<p>Wrong</p>' : ''}
+        ${wrongLetters.length > 0 ? '<p>Mauvaises lettres</p>' : ''}
         ${wrongLetters.map(letter => `<span>${letter}</span>`)}
     `;
 
@@ -57,8 +58,10 @@ function updateWrongLettersEl() {
         }
     })
     if (wrongLetters.length === figureParts.length) {
-        finalMessage.innerText = 'Vous avez perdu';
-        popup.style.display = 'flex';
+        setTimeout(() => {
+            finalMessage.innerText = 'Malheureusement tu as perdu';
+            popup.style.display = 'flex';
+        }, 100);
     }
 }
 
