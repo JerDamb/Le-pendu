@@ -11,49 +11,58 @@
 
 <body>
     <div class="container">
-        <H1>Le pendu</H1>
+        <div class="shootingstars">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+        </div>
         <div id="parallax-star"></div>
         <div id="parallax-star2"></div>
-        <div class="gallows"></div>
-        <div class="moon"></div>
-        <div class="spaceship"></div>
-        <div class="explanations">
-            <p>A toi de retrouver le mot caché, attention chaque erreur te rapproche un peu plus de la mort.</p>
-            <p>Attention 6 erreurs et s'en est fini de toi !</p>
-        </div>
-        <svg height="250" width="200" class="figure-container">
+        <div class="game">
+            <H1>Le pendu</H1>
+            <div class="gallows"></div>
+            <div class="moon"></div>
+            <div class="spaceship"></div>
+            <div class="explanations">
+                <p>A toi de retrouver le mot caché, attention chaque erreur te rapproche un peu plus de la mort.</p>
+                <p>Attention 6 erreurs et s'en est fini de toi !</p>
+            </div>
+            <svg height="250" width="200" class="figure-container">
 
-            <!-- POTEAU
+                <!-- POTEAU
                 <line x1="60" y1="20" x2="140" y2="20" />
                 <line x1="140" y1="20" x2="140" y2="50" />
                 <line x1="60" y1="20" x2="60" y2="230" />
                 <line x1="20" y1="230" x2="100" y2="230" /> -->
 
-            <!-- TETE -->
-            <circle cx="140" cy="70" r="20" class="figure-part" />
+                <!-- TETE -->
+                <circle cx="140" cy="70" r="20" class="figure-part" />
 
-            <!-- CORPS -->
-            <line x1="140" y1="90" x2="140" y2="150" class="figure-part" />
+                <!-- CORPS -->
+                <line x1="140" y1="90" x2="140" y2="150" class="figure-part" />
 
-            <!-- BRAS -->
-            <line x1="140" y1="120" x2="120" y2="100" class="figure-part" />
-            <line x1="140" y1="120" x2="160" y2="100" class="figure-part" />
+                <!-- BRAS -->
+                <line x1="140" y1="120" x2="120" y2="100" class="figure-part" />
+                <line x1="140" y1="120" x2="160" y2="100" class="figure-part" />
 
-            <!-- JAMBES -->
-            <line x1="140" y1="150" x2="120" y2="180" class="figure-part" />
-            <line x1="140" y1="150" x2="160" y2="180" class="figure-part" />
-        </svg>
-        <div class="wrong-letters-container">
-            <div id="wrong-letters"></div>
+                <!-- JAMBES -->
+                <line x1="140" y1="150" x2="120" y2="180" class="figure-part" />
+                <line x1="140" y1="150" x2="160" y2="180" class="figure-part" />
+            </svg>
+            <div class="wrong-letters-container">
+                <div id="wrong-letters"></div>
+            </div>
+            <div class="word" id="word"></div>
         </div>
-        <div class="word" id="word"></div>
     </div>
 
     <!-- POP UP -->
     <div class="popup-container" id="popup-container">
         <div class="popup">
             <h2 id="final-message"></h2>
-            <button id="play-button">Rejouer une partie</button>
+            <button id="play-button" class="button">Rejouer une partie</button>
         </div>
     </div>
     <!-- <div class="dictionary-container" id="dictionary-container">
