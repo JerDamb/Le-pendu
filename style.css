@@ -395,6 +395,7 @@ h1 {
   }
 
   .wrong-letters-container{
+    padding-left:0;
     top:60%;
     z-index: 4;
     left:0;
