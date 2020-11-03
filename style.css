@@ -70,10 +70,11 @@ h1 {
   z-index: 3;
 }
 
-.moon {
+.moon { 
   position: absolute;
   width: 440px;
   height: 440px;
+  /* changer le margin 0 0 0 0 auto pour que la lune arrête de glisser sur le mot pendu */
   top: 0;
   bottom:0;
   left:0;
@@ -84,19 +85,19 @@ h1 {
 }
 
 .wrong-letters-container {
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-radius: 8px;
   margin-top: 21%;
   margin-left: 60%;
   padding-left: 50px;
   width: 250px;
   height: 100px;
   background-color: rgba(255, 255, 255, 0.3);
-  position: absolute;
   text-align: center;
   z-index: 1;
-  border-radius: 8px;
 }
 
 .wrong-letters-container p {
@@ -133,7 +134,6 @@ h1 {
   height: 80px;
   background-color:rgb(255, 255, 255, 0.1);
   border-radius:8px;
-  color: white;
   display: flex;
   justify-content:center;
   position: absolute;
@@ -156,25 +156,27 @@ h1 {
 }
 
 .popup-container {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
   top: 0;
-  bottom: 0;
-  left: 0;
-  Right: 0;
+  left:0;
+  width:100%;
+  height: 100vh;
   /* display: flex; */
-  align-items: center;
-  justify-content: center;
+  z-index:5;
   display: none;
 }
 
 .popup {
+  top:0;
+  bottom:0;
+  margin: auto;
+  transform: translateY(-20%);
   text-transform: uppercase;
   font-family: 'Raleway', sans-serif;
   color: black;
   background-color: white;
   border-radius: 5px;
-  margin-top: 600px;
   box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
   padding: 20px;
   text-align: center;
@@ -185,11 +187,16 @@ h1 {
   border: none;
   cursor: pointer;
   font-size: 20px;
-  background: linear-gradient(60deg, #e7b27e, #ffd586, #ffedb9);
   padding: 20px;
   -webkit-box-shadow: 0px 0px 11px 1px rgba(158, 158, 158, 1);
   -moz-box-shadow: 0px 0px 11px 1px rgba(158, 158, 158, 1);
   box-shadow: 0px 0px 11px 1px rgba(158, 158, 158, 1);
+  transition-duration: .5s;
+}
+
+.popup button:hover{
+  transition-duration: .5s;
+  background-color:#ffd586;
 }
 
 .popup button:active {
@@ -225,6 +232,13 @@ h1 {
 }
 
 
+
+/*************************************** MEDIA QUERY ***************************************/
+
+
+
+
+/*************************************** BACKGROUND ***************************************/
 .star {
   position: absolute;
   top: 50%;
