@@ -1,4 +1,4 @@
-// VARIABLES
+//Variables
 const wordEl = document.getElementById('word');
 const wrongLettersEl = document.getElementById('wrong-letters');
 const playAgainBtn = document.getElementById('play-button');
@@ -21,10 +21,10 @@ const words = ['bleu', 'super', 'autre', 'bizarre', 'difficile', 'drole', 'etran
 const correctLetters = [];
 const wrongLetters = [];
 
-// CHOOSE A RANDOM WORD IN WORDS ARRAY
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
 
+//Affiche dans .word les lettres d'un mot choisi au hasard dans le tableau words[], si les mots correspondent -> affiche le message popup de victoire
 function displayWord() {
     wordEl.innerHTML = `
     ${selectedWord.split('').map(letter => `
@@ -42,6 +42,8 @@ function displayWord() {
     }
 }
 
+
+//Stock les mauvaises lettres dans le wrongLetters[], si le nombre de mauvaises lettres est égal au nombre de partie de corps -> affiche le message popup de défaite
 function updateWrongLettersEl() {
     wrongLettersEl.innerHTML = `
         ${wrongLetters.length > 0 ? '<p>Mauvaises lettres</p>' : ''}
@@ -66,6 +68,7 @@ function updateWrongLettersEl() {
 }
 
 
+//Fonction d'affichage de notification
 function showNotification() {
     notification.classList.add('show');
 
@@ -75,7 +78,7 @@ function showNotification() {
 }
 
 
-
+//Récupère l'input rentré et lance différentes function en fonctions des cas de figure
 window.addEventListener('keydown', e => {
 
     if (e.keyCode >= 65 && e.keyCode <= 90) {
@@ -101,6 +104,8 @@ window.addEventListener('keydown', e => {
     }
 });
 
+
+//Bouton qui relance displayWord() et réinitialise ce qui a besoin de l'être
 playAgainBtn.addEventListener('click', () => {
     correctLetters.splice(0);
     wrongLetters.splice(0);
@@ -115,4 +120,5 @@ playAgainBtn.addEventListener('click', () => {
 })
 
 
+//Fonction au lancement du script
 displayWord();

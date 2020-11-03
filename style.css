@@ -43,7 +43,7 @@ body {
 }
 
 .spaceship {
-  position:absolute;
+  position: absolute;
   margin-left: 80%;
   background: url(./img/spacecraft-svgrepo-com.svg);
   width: 120px;
@@ -53,7 +53,7 @@ body {
 
 h1 {
   padding-top: 125px;
-  position:absolute;
+  position: absolute;
   font-size: 80px;
   margin: 0 0 0;
   color: white;
@@ -70,12 +70,12 @@ h1 {
   z-index: 3;
 }
 
-.moon { 
+.moon {
   position: absolute;
   width: 440px;
   height: 440px;
-  left:300px;
-  top:282px;
+  left: 300px;
+  top: 282px;
   background: url(./img/moon-svgrepo-com.svg);
   z-index: 2;
 }
@@ -126,13 +126,13 @@ h1 {
 }
 
 .word {
-  z-index:6;
-  width:100%;
+  z-index: 6;
+  width: 100%;
   height: 80px;
-  background-color:rgb(255, 255, 255, 0.1);
-  border-radius:8px;
+  background-color: rgb(255, 255, 255, 0.1);
+  border-radius: 8px;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   position: absolute;
   bottom: 12%;
   left: 50%;
@@ -156,17 +156,17 @@ h1 {
   background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
   top: 0;
-  left:0;
-  width:100%;
+  left: 0;
+  width: 100%;
   height: 100vh;
   /* display: flex; */
-  z-index:9;
+  z-index: 9;
   display: none;
 }
 
 .popup {
-  top:0;
-  bottom:0;
+  top: 0;
+  bottom: 0;
   margin: auto;
   transform: translateY(-20%);
   text-transform: uppercase;
@@ -191,9 +191,9 @@ h1 {
   transition-duration: .5s;
 }
 
-.popup button:hover{
+.popup button:hover {
   transition-duration: .5s;
-  background-color:#ffd586;
+  background-color: #ffd586;
 }
 
 .popup button:active {
@@ -231,194 +231,194 @@ h1 {
 
 
 /*************************************** MEDIA QUERY ***************************************/
-@media only screen and (max-width: 1023px){
-  .game{
-    width:700px;
+@media only screen and (max-width: 1023px) {
+  .game {
+    width: 700px;
     transition-duration: 2s;
   }
 
-  .explanations{
+  .explanations {
     font-size: 15px;
   }
 
-  .spaceship{
-    margin-top:4%;
-    margin-left:75%;
-    width:80px;
-    height:80px;
+  .spaceship {
+    margin-top: 4%;
+    margin-left: 75%;
+    width: 80px;
+    height: 80px;
   }
 
-  h1{
-    padding-left:20px;
-    padding-top:80px;
-    font-size:50px;
+  h1 {
+    padding-left: 20px;
+    padding-top: 80px;
+    font-size: 50px;
   }
 
-  .moon{
-    left:200px;
+  .moon {
+    left: 200px;
     top: 187px;
-    width:300px;
+    width: 300px;
     height: 300px;
   }
 
-  .gallows{
-    margin-top:132px;
+  .gallows {
+    margin-top: 132px;
     margin-left: 80px;
-    width:220px;
+    width: 220px;
     height: 220px;
   }
 
-  .wrong-letters-container{
-    margin-top:28%;
-    margin-left:63%;
-    width:200px;
-    height:80px;
+  .wrong-letters-container {
+    margin-top: 28%;
+    margin-left: 63%;
+    width: 200px;
+    height: 80px;
   }
 
-  .wrong-letters-container p{
+  .wrong-letters-container p {
     font-size: 14px;
   }
 
-  .wrong-letters-container span{
+  .wrong-letters-container span {
     font-size: 14px;
   }
 
-  .word{
-    height:60px;
+  .word {
+    height: 60px;
   }
 
-  .letter{
-    font-size:20px;
+  .letter {
+    font-size: 20px;
   }
 }
 
 
-@media only screen and (max-width: 699px){
-  .game{
-    width:480px;
+@media only screen and (max-width: 699px) {
+  .game {
+    width: 480px;
     transition-duration: 2s;
   }
 
-  .explanations{
+  .explanations {
     font-size: 15px;
   }
 
-  .spaceship{
-    margin-top:4%;
-    margin-left:75%;
-    width:80px;
-    height:80px;
+  .spaceship {
+    margin-top: 4%;
+    margin-left: 75%;
+    width: 80px;
+    height: 80px;
   }
 
-  h1{
-    padding-top:80px;
-    font-size:34px;
+  h1 {
+    padding-top: 80px;
+    font-size: 34px;
   }
 
-  .moon{
-    left:0;
-    right:0;
+  .moon {
+    left: 0;
+    right: 0;
     margin: auto;
     top: 187px;
-    width:250px;
+    width: 250px;
     height: 250px;
   }
 
-  .gallows{
-    margin-top:115px;
-    margin-left:60px;
-    width:160px;
+  .gallows {
+    margin-top: 115px;
+    margin-left: 60px;
+    width: 160px;
     height: 160px;
   }
 
-  .wrong-letters-container{
-    margin-top:28%;
-    margin-left:63%;
-    width:160px;
-    height:80px;
+  .wrong-letters-container {
+    margin-top: 28%;
+    margin-left: 63%;
+    width: 160px;
+    height: 80px;
   }
 
-  .wrong-letters-container p{
+  .wrong-letters-container p {
     font-size: 14px;
   }
 
-  .wrong-letters-container span{
+  .wrong-letters-container span {
     font-size: 14px;
   }
 
-  .word{
-    height:60px;
+  .word {
+    height: 60px;
   }
 
-  .letter{
-    font-size:20px;
+  .letter {
+    font-size: 20px;
   }
 }
 
-@media only screen and (max-width: 479px){
-  .game{
-    width:350px;
+@media only screen and (max-width: 479px) {
+  .game {
+    width: 350px;
     transition-duration: 2s;
   }
 
-  .explanations{
+  .explanations {
     font-size: 12px;
   }
 
-  .spaceship{
-    margin-top:10%;
-    margin-left:85%;
-    width:50px;
-    height:50px;
+  .spaceship {
+    margin-top: 10%;
+    margin-left: 85%;
+    width: 50px;
+    height: 50px;
     transform: rotate(47deg)
   }
 
-  h1{
-    padding-left:20px;
-    padding-top:80px;
-    font-size:30px;
+  h1 {
+    padding-left: 20px;
+    padding-top: 80px;
+    font-size: 30px;
   }
 
-  .moon{
-    margin-left:130px;
+  .moon {
+    margin-left: 130px;
     margin-top: -30px;
     top: 187px;
-    width:180px;
+    width: 180px;
     height: 180px;
   }
 
-  .gallows{
-    margin-top:112px;
+  .gallows {
+    margin-top: 112px;
     margin-left: 58px;
-    width:130px;
+    width: 130px;
     height: 130px;
   }
 
-  .wrong-letters-container{
-    padding-left:0;
-    top:60%;
+  .wrong-letters-container {
+    padding-left: 0;
+    top: 60%;
     z-index: 4;
-    left:0;
-    right:0;
-    margin:auto;
-    width:200px;
-    height:80px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 200px;
+    height: 80px;
   }
 
-  .wrong-letters-container p{
+  .wrong-letters-container p {
     font-size: 14px;
   }
 
-  .wrong-letters-container span{
+  .wrong-letters-container span {
     font-size: 14px;
   }
 
-  .word{
-    height:60px;
+  .word {
+    height: 60px;
   }
 
-  .letter{
-    font-size:20px;
+  .letter {
+    font-size: 20px;
   }
 }
 
